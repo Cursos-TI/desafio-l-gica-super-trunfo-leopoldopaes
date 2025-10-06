@@ -6,9 +6,9 @@ int main() {
     
     // Definição das variáveis 
 
-    char estado01[20],estado02[20];
-    char codigo01[20],codigo02[20];
-    char cidade01[20],cidade02[20];
+    int estado01,estado02;
+    int codigo01,codigo02;
+    char cidade01[50],cidade02[50];
     unsigned long int populacao01, populacao02;
     float area01,area02;
     float pib01, pib02;
@@ -28,7 +28,7 @@ int main() {
     printf ("\n**Digite os dados da primeira Carta**\n");
 
     printf(" Estado: ");
-    scanf("%s", &estado01);
+    scanf("%s",&estado01);
 
     printf(" Código da carta: ");
     scanf("%s", &codigo01);
@@ -53,7 +53,7 @@ int main() {
     printf ("\n**Digite os dados da segunda Carta**\n");
 
     printf(" Estado: ");
-    scanf("%s", &estado02);
+    scanf("%s",&estado02);
 
     printf(" Código da carta: ");
     scanf("%s", &codigo02);
@@ -90,8 +90,8 @@ int main() {
     printf("4 - Pontos Turísticos\n");
     printf("5 - Densidade Populacional (vence o MENOR)\n");
     printf("6 - PIB per Capita\n");
-    printf("\nEscolha o primeiro atributo para comparar: ");
-    scanf("%d", &escolha01);
+    printf("\n Escolha o primeiro atributo para comparar: ");
+    scanf("%d", & escolha01);
 
    
     switch (escolha01)
@@ -188,7 +188,7 @@ int main() {
     printf("4 - Pontos Turísticos\n");
     printf("5 - Densidade Populacional (vence o MENOR)\n");
     printf("6 - PIB per Capita\n");
-    printf("\nEscolha o segundo atributo diferente do primeiro: ");
+    printf("\n Escolha o segundo atributo diferente do primeiro: ");
     scanf("%d", &escolha02);
 
     if (escolha01 == escolha02) {
@@ -282,16 +282,16 @@ int main() {
 
     // Exibição dos Resultados:
 
-    printf (" \n### Placar final ###\n");
+    printf (" \n Placar final \n");
     printf ("%s : %d pontos\n", cidade01, pontos1);
     printf ("%s : %d pontos\n", cidade02, pontos2);
 
     if (pontos1 > pontos2) {
-        printf (" \nA carta vencedora foi da cidade: %s\n", cidade01);
+        printf (" \n A carta vencedora foi da cidade: %s\n", cidade01);
     } else if (pontos1 < pontos2) {
-        printf (" \nA carta  vencedora foi da cidade: %s\n", cidade02);
+        printf (" \n A carta  vencedora foi da cidade: %s\n", cidade02);
     } else {
-        printf (" \nA competição ficou empatada!\n");
+        printf (" \n A competição ficou empatada!\n");
     }
    
     return 0;
